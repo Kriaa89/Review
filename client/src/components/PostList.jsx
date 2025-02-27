@@ -14,6 +14,22 @@ const Postlist = () => {
         <div>
             <div>
                 <h1>Hello to Posts Hub</h1>
+                <h3>List of All Posts</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Reviews</th>
+                            <th>Created At</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {posts.map(post => (
+                            
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </div>
     )
