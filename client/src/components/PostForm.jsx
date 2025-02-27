@@ -23,9 +23,21 @@ const PostForm = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Post Title:</label>
-                    <input type="text" value={post.title}></input>
+                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
+                    {errors.title && <span>{errors.title.message}</span>}
+                </div>
+                <div>
+                    <label>Post Title:</label>
+                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
+                    {errors.title && <span>{errors.title.message}</span>}
+                </div>
+                <div>
+                    <label>Post Title:</label>
+                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
+                    {errors.title && <span>{errors.title.message}</span>}
                 </div>
             </form>
         </div>
     )
 }
+export default PostForm;
