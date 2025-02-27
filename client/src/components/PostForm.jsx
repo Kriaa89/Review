@@ -20,6 +20,12 @@ const PostForm = () => {
     return (
         <div>
             <h2>Add a Post</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Post Title:</label>
+                    <input type="text" value={post.title}></input>
+                </div>
+            </form>
         </div>
     )
 }
