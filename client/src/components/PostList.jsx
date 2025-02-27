@@ -28,7 +28,9 @@ const Postlist = () => {
                         {posts.map(post => (
                             <tr key={post._id}>
                                 <td>
-                                    <Link to={`/posts/${post.}`}></Link>
+                                    <Link to={`/posts/${post._id}`}>
+                                        
+                                    </Link>
                                 </td>
                             </tr>
                         ))}
