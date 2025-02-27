@@ -34,5 +34,7 @@ const Postlist = () => {
                 </table>
             </div>
         </div>
-    )
+    );
 }
+
+export default Postlist;
