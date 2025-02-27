@@ -42,7 +42,10 @@ const Postlist = () => {
                                 <td>{post.reviews.length}</td>
                                 <td>{post.createdAt}</td>
                                 <td>
-                                    <button onClick={handleDlete}>Remove</button>
+                                    <button onClick={() => handleDlete(post._id)}>Delete</button>
+                                    <Link to={`/posts/${post._id}/edit`}>
+                                        <button>Edit</button>
+                                    </Link>
                                 </td>
                             </tr>
                         ))}
