@@ -26,7 +26,9 @@ const Postlist = () => {
                     </thead>
                     <tbody>
                         {posts.map(post => (
-                            
+                            <tr key={post._id}>
+                                
+                            </tr>
                         ))}
                     </tbody>
                 </table>
