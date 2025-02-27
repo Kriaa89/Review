@@ -43,3 +43,13 @@ async function UpdateBook(req, res) {
         res.status(400).json(error);
     }
 }
+
+// delete a post by id
+async function DeleteBook(req, res) {
+    try {
+        const DeleteBook = await Post.findByIdAndDelete(req.params.id);
+        res.json(DeleteBook);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+}
