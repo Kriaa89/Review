@@ -14,8 +14,8 @@ const PostSchema = new Schema(
             maxlength: [255, "Last name must be less than 255 characters long"]
         },
         reviews: {
-            type: String,
-            default: false
+            type: [String],
+            default: []
         }
     },
     { timestamps: true }
