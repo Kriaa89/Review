@@ -9,3 +9,14 @@ async function CreatePost(req, res) {
         res.status(400).json(error);
     }
 }
+
+
+// get all post from the database
+async function GetAllBooks(req, res) {
+    try {
+        const AllBooks = await Post.find();
+        res.json(AllBooks);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+}
