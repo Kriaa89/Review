@@ -27,15 +27,11 @@ const PostForm = () => {
                     {errors.title && <span>{errors.title.message}</span>}
                 </div>
                 <div>
-                    <label>Post Title:</label>
-                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
-                    {errors.title && <span>{errors.title.message}</span>}
+                    <label>Post Desciption:</label>
+                    <input type="text" value={post.description} onChange={e => setPost({...post, description: e.target.value})}></input>
+                    {errors.description && <span>{errors.description.message}</span>}
                 </div>
-                <div>
-                    <label>Post Title:</label>
-                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
-                    {errors.title && <span>{errors.title.message}</span>}
-                </div>
+                <button type="submit">Add Post</button>
             </form>
         </div>
     )
