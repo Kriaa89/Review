@@ -53,3 +53,7 @@ async function DeleteBook(req, res) {
         res.status(400).json(error);
     }
 }
+
+// export the functions 
+
+export { CreatePost, GetAllBooks, GetOneBooks, UpdateBook, DeleteBook };
