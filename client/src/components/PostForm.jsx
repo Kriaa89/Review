@@ -31,7 +31,7 @@ const PostForm = () => {
                     <input type="text" value={post.description} onChange={e => setPost({...post, description: e.target.value})}></input>
                     {errors.description && <span>{errors.description.message}</span>}
                 </div>
-                <button type="submit">Add Post</button>
+                <button type="submit">Save</button>
             </form>
         </div>
     )
