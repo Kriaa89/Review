@@ -9,3 +9,5 @@ router.get("/", GetAllBooks);
 router.get("/:id", GetOneBooks);
 router.put("/:id", UpdateBook);
 router.delete("/:id", DeleteBook)
+
+export default router;
