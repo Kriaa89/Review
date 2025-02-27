@@ -27,7 +27,9 @@ const Postlist = () => {
                     <tbody>
                         {posts.map(post => (
                             <tr key={post._id}>
-                                
+                                <td>
+                                    <Link to={`/posts/${post.}`}></Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
