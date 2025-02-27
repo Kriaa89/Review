@@ -13,11 +13,6 @@ const PostSchema = new Schema(
             minlength: [2, "Last name must be at least 2 characters long!"],
             maxlength: [255, "Last name must be less than 255 characters long"]
         },
-        age: {
-            type: Number,
-            required: [true, "Age is required!"],
-            min: [16, "Person must be at least 16 years old!"]
-        },
         reviews: {
             type: String,
             default: false
@@ -25,5 +20,5 @@ const PostSchema = new Schema(
     },
     { timestamps: true }
 );
-const Person = model("Post", PostSchema);
-export default Person;
+const Post = model("Post", PostSchema);
+export default Post;
