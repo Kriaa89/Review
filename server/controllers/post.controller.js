@@ -22,10 +22,10 @@ async function GetAllBooks(req, res) {
 }
 
 // get one post from the database
-async function GetAllBooks(req, res) {
+async function GetOneBooks(req, res) {
     try {
-        const AllBooks = await Post.find();
-        res.json(AllBooks);
+        const OneBooks = await Post.findById(req.params.id);
+        res.json(OneBooks);
     } catch (error) {
         res.status(400).json(error);
     }
