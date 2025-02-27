@@ -13,7 +13,7 @@ const Postlist = () => {
         axios.delete("http://localhost:8000/api/posts/" + id)
             .then(() => {
                 setPosts(posts.filter(post => post._id !== id))
-            });
+            })
             .catch(err => {console.log(err)});
     }
 
@@ -40,6 +40,10 @@ const Postlist = () => {
                                     </Link>
                                 </td>
                                 <td>{post.reviews.length}</td>
+                                <td>{post.createdAt}</td>
+                                <td>
+                                    <button onClick={handleDlete}>Remove</button>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
