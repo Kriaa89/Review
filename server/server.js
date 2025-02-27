@@ -8,6 +8,11 @@ const app = express();
 app.use(express.json(), cors());
 dotenv.config();
 
+const PORT = process.env.PORT;
 
+app.use("/api/posts", router);
+dbConnect();
 
-app.listen( port, () => console.log(`Listening on port: ${port}`) );
+app.listen(PORT, () => 
+    console.log(`Server is running on port ${PORT}`)
+);
