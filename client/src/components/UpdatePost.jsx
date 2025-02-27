@@ -41,6 +41,7 @@ const UpdatePost = () => {
                     <label>Add a review:</label>
                     <input type="text" value={post.reviews} onChange={e => setPost({...post, reviews: e.target.value})}></input>
                 </div>
+                <button type="submit">Save</button>
             </form>
         </div>
     );
