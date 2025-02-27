@@ -30,3 +30,16 @@ async function GetOneBooks(req, res) {
         res.status(400).json(error);
     }
 }
+
+// update a psot by id 
+async function UpdateBook(req, res) {
+    try {
+        const UpdateBook = await Post.findByIdAndUpdate(req.params.id, req.body, {
+            runValidators: true,
+            new: true
+        });
+        res.json(UpdateBook);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+}
