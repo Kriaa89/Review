@@ -20,7 +20,7 @@ const PostDetails = () => {
         <div>
             <h3>Reviews {post.reviews.index}</h3>
             <div>
-                <p><strong>Title:</strong></p>
+                <p><strong>Title:</strong> {post.title}</p>
                 <p><strong>Post Description:</strong></p>
                 <p><strong>Title</strong></p>
             </div>
