@@ -32,7 +32,7 @@ const Postlist = () => {
                                         Post {post.index}
                                     </Link>
                                 </td>
-                                <td>{post.reviews.lenght}</td>
+                                <td>{post.reviews.length}</td>
                             </tr>
                         ))}
                     </tbody>
