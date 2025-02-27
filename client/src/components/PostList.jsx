@@ -29,7 +29,7 @@ const Postlist = () => {
                             <tr key={post._id}>
                                 <td>
                                     <Link to={`/posts/${post._id}`}>
-                                        
+                                        Post {post.index}
                                     </Link>
                                 </td>
                             </tr>
