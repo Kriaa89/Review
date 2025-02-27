@@ -9,6 +9,13 @@ const Postlist = () => {
             .then(res => setPosts(res.data))
             .catch(err => console.log(err));
     }, []);
+    const handleDlete = (id) => {
+        axios.delete("http://localhost:8000/api/posts/" + id)
+            .then(() => {
+                setPosts(posts.filter(post => post._id !== id))
+            });
+            .catch(err => {console.log(err)});
+    }
 
     return (
         <div>
