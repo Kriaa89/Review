@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path="/posts/"/>
+        <Route path="/" element={<PostList/>}/>
         <Route/>
         <Route/>
       </Routes>
