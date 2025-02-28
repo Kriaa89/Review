@@ -11,8 +11,9 @@ function App() {
       <Header/>
       <Routes>
         <Route path="/" element={<PostList/>}/>
-        <Route/>
-        <Route/>
+        <Route path="/posts" element={<PostForm/>}/>
+        <Route path="/posts/:id" element={<PostDetail/>}/>
+        <Route path="/posts/:id/edit" element={<UpdatePost/>}/>
       </Routes>
     </BrowserRouter>
   )
