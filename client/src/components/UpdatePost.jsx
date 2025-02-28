@@ -28,18 +28,14 @@ const UpdatePost = () => {
             <h2>Edit</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label>Post Title:</label>
-                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}> </input>
+                    <label>Title:</label>
+                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
                     {errors.title && <span>{errors.title.message}</span>}
                 </div>
                 <div>
-                    <label>Post Description:</label>
+                    <label>Description:</label>
                     <input type="text" value={post.description} onChange={e => setPost({...post, description: e.target.value})}></input>
                     {errors.description && <span>{errors.description.message}</span>}
-                </div>
-                <div>
-                    <label>Add a review:</label>
-                    <input type="text" value={post.reviews} onChange={e => setPost({...post, reviews: e.target.value})}></input>
                 </div>
                 <button type="submit">Save</button>
             </form>
