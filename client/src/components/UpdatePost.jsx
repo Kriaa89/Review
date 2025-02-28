@@ -18,7 +18,7 @@ const UpdatePost = () => {
     }, [id]);
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put("http://localhost:8000/api/posts/" + id, post)
+        axios.patch("http://localhost:8000/api/posts/" + id, post)
             .then(() => navigate("/"))
             .catch(err => setErrors(err.response.data.errors));
     };
