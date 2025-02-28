@@ -4,7 +4,11 @@ import { useParams } from "react-router-dom";
 
 
 const PostDetails = () => {
-    const [ post, setPost ] = useState({});
+    const [ post, setPost ] = useState({
+        title: "",
+        description: "",
+        reviews: []
+    });
     const { id } = useParams();
 
 
