@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json(), cors());
 dotenv.config();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 
 app.use("/api/posts", router);
 dbConnect();
