@@ -18,12 +18,12 @@ const Postlist = () => {
     }
 
     return (
-        <div>
+        <div className="container py-4">
             <div>
-                <h1>Hello to Posts Hub</h1>
-                <h3>List of All Posts</h3>
-                <table>
-                    <thead>
+                <h1 className="text-primary mb-3">Hello to Posts Hub</h1>
+                <h3 className="mb-4">List of All Posts</h3>
+                <table className="table table-striped table-hover">
+                    <thead className="table-dark">
                         <tr>
                             <th>Title</th>
                             <th>Reviews</th>
@@ -35,8 +35,8 @@ const Postlist = () => {
                         {posts.map(post => (
                             <tr key={post._id}>
                                 <td>
-                                    <Link to={`/posts/${post._id}`}>
-                                        Post {post.index}
+                                    <Link to={`/posts/${post._id}`} className="text-decoration-none">
+                                        Post {post.title}
                                     </Link>
                                 </td>
                                 <td>{post.reviews.length}</td>

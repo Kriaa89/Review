@@ -18,20 +18,20 @@ const PostForm = () => {
             .catch(err => setErrors(err.response.data.errors));
     };
     return (
-        <div>
-            <h2>Add a Post</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Post Title:</label>
-                    <input type="text" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
-                    {errors.title && <span>{errors.title.message}</span>}
+        <div className="container py-4">
+            <h2 className="mb-4">Add a Post</h2>
+            <form onSubmit={handleSubmit} className="card shadow p-4">
+                <div className="mb-3">
+                    <label className="form-label">Post Title:</label>
+                    <input type="text" className="form-control" value={post.title} onChange={e => setPost({...post, title: e.target.value})}></input>
+                    {errors.title && <span className="text-danger">{errors.title.message}</span>}
                 </div>
-                <div>
-                    <label>Post Desciption:</label>
-                    <input type="text" value={post.description} onChange={e => setPost({...post, description: e.target.value})}></input>
-                    {errors.description && <span>{errors.description.message}</span>}
+                <div className="mb-3">
+                    <label className="form-label">Post Desciption:</label>
+                    <input type="text" className="form-control" value={post.description} onChange={e => setPost({...post, description: e.target.value})}></input>
+                    {errors.description && <span className="text-danger">{errors.description.message}</span>}
                 </div>
-                <button type="submit">Save</button>
+                <button type="submit" className="btn btn-primary">Save</button>
             </form>
         </div>
     )
