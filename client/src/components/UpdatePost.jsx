@@ -12,13 +12,13 @@ const UpdatePost = () => {
     });
     const [errors, setErrors] = useState({});
     useEffect(() => {
-        axios.get("http://localhost:8000/api/posts/" + id)
+        axios.get(`http://localhost:8000/api/posts/${id}`)
             .then(res => setPost(res.data))
             .catch(err => console.log(err));
     }, [id]);
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.patch("http://localhost:8000/api/posts/" + id, post)
+        axios.put(`http://localhost:8000/api/posts/${id}`)
             .then(() => navigate("/"))
             .catch(err => setErrors(err.response.data.errors));
     };
