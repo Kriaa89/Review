@@ -37,6 +37,11 @@ const UpdatePost = () => {
                     <input type="text" className="form-control" value={post.description} onChange={e => setPost({...post, description: e.target.value})}></input>
                     {errors.description && <span className="text-danger">{errors.description.message}</span>}
                 </div>
+                <div className="mb-3">
+                    <label className="form-label">Reviews:</label>
+                    <input type="text" className="form-control" value={post.reviews} onChange={e => setPost({...post, reviews: e.target.value})}></input>
+                    {errors.reviews && <span className="text-danger">{errors.reviews.message}</span>}
+                </div>
                 <button type="submit" className="btn btn-primary">Save</button>
             </form>
         </div>
