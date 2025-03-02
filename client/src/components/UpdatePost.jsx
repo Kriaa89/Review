@@ -39,9 +39,13 @@ const UpdatePost = () => {
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Reviews:</label>
-                    
-                    <input type="text" className="form-control" value={post.reviews} onChange={e => setPost({...post, reviews: e.target.value})}></input>
-
+                    {post.reviews.map((review, index) => (
+                        <input key={index} type="text" className="form-control" value={review} onChange={e => {
+                            const newReviews = [...post.reviews];
+                            newReviews[index] = e.target.value;
+                            setPost({...post, reviews: newReviews});
+                        }}></input>
+                    ))}
                     {errors.reviews && <span className="text-danger">{errors.reviews.message}</span>}
                 </div>
                 <button type="submit" className="btn btn-primary">Save</button>
