@@ -22,12 +22,6 @@ const UpdatePost = () => {
             .then(() => navigate("/"))
             .catch(err => setErrors(err.response.data.errors));
     };
-    const addReview = () => {
-        const newReviews = [...post.reviews];
-        newReviews.push("");
-        setPost({...post, reviews: newReviews});
-    }
-
     return (
         <div className="container py-4">
             <h2 className="mb-4">Edit</h2>
@@ -44,10 +38,9 @@ const UpdatePost = () => {
                 </div>
                 <div className="mb-3">
                     <label className="form-label">Reviews:</label>
-                    <button type="button" className="btn btn-primary" onClick={addReview}>Add Review</button>
                     {post.reviews.map((review, index) => (
                         <input key={index} type="text" className="form-control" value={review} onChange={e => {
-                            const newReviews = [...post.reviews];
+                            const newReviews = [...post.reviews]; // 
                             newReviews[index] = e.target.value;
                             setPost({...post, reviews: newReviews});
                         }}></input>

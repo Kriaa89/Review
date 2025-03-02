@@ -40,7 +40,7 @@ const Postlist = () => {
                                     </Link>
                                 </td>
                                 <td className="badge bg-info text-dark mt-2">{post.reviews.length}</td>
-                                <td>{post.createdAt}</td>
+                                <td>{post.createdAt.split("T")[0]}</td>
                                 <td>
                                     <button onClick={() => handleDlete(post._id)} className="btn btn-danger btn-sm me-2">Delete</button>
                                     <Link to={`/posts/${post._id}/edit`}>
