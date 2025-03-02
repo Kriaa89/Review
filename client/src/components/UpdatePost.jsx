@@ -41,7 +41,7 @@ const UpdatePost = () => {
                     <label className="form-label">Reviews:</label>
                     {post.reviews.map((review, index) => (
                         <input key={index} type="text" className="form-control" value={review} onChange={e => {
-                            const newReviews = [...post.reviews];
+                            const newReviews = [...post.reviews]; // 
                             newReviews[index] = e.target.value;
                             setPost({...post, reviews: newReviews});
                         }}></input>
